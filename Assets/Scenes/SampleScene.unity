@@ -299,6 +299,11 @@ Transform:
   - {fileID: 31178122}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &817041779 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1388610676051407694, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
+  m_PrefabInstance: {fileID: 3382496894282837156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3382496894282837156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -311,6 +316,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece
       objectReference: {fileID: 0}
+    - target: {fileID: 7147816754705278828, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
+      propertyPath: _source
+      value: 
+      objectReference: {fileID: 817041779}
+    - target: {fileID: 7147816754705278828, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
+      propertyPath: _dropClick
+      value: 
+      objectReference: {fileID: 8300000, guid: a979cbd6f99cae4f494185620ee2030e, type: 3}
+    - target: {fileID: 7147816754705278828, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
+      propertyPath: _pickUpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bebe0cfbdeb4467c2a7520d6aa5b8ac6, type: 3}
     - target: {fileID: 9148273987329180622, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.99
