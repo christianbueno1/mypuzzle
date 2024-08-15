@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3164067340563947588, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
+      propertyPath: _completeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2fc9cf818422b9315bf6e01b7391775e, type: 3}
     - target: {fileID: 6044412388583758267, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
       propertyPath: m_Name
-      value: Puzzle Slot Base
+      value: Puzzle Slot Base School
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
