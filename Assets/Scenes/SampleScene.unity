@@ -304,11 +304,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1388610676051407694, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
   m_PrefabInstance: {fileID: 3382496894282837156}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1082267602 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2417021773275528022, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
-  m_PrefabInstance: {fileID: 9034589038219020140}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3382496894282837156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -426,10 +421,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3164067340563947588, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
-      propertyPath: _source
-      value: 
-      objectReference: {fileID: 1082267602}
     - target: {fileID: 6044412388583758267, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
       propertyPath: m_Name
       value: Puzzle Slot Base
