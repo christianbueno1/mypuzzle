@@ -7,12 +7,60 @@ public class PuzzlePiece : MonoBehaviour
     [SerializeField] private AudioSource _source;
     [SerializeField] private AudioClip _pickUpClip, _dropClick;
     private bool _dragging, _placed;
+    private Vector2 _offset, _originalPosition;
+    private PuzzleSlot _slot;
+
+    public void Init(PuzzleSlot slot)
+    {
+        // _renderer.sprite = slot.Renderer.sprite;
+        _slot = slot;
+    }
+
+    void Awake()
+    {
+        _originalPosition = transform.position;
+    }
+
+    void Update()
+    {
+        // if (_placed) return;
+        if (!_dragging) return;
+
+        var mousePosition = GetMousePos();
+        transform.position = mousePosition - _offset;
+    }
 
     void OnMouseDown()
     {
         _dragging = true;
         _source.PlayOneShot(_pickUpClip);
         
-        // _offset = GetMousePos() - (Vector2)transform.position;
+        _offset = GetMousePos() - (Vector2)transform.position;
+    }
+
+    void OnMouseUp()
+    {
+        transform.position = _originalPosition;
+        _dragging = false;
+        _source.PlayOneShot(_dropClick);
+
+        // if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
+        // {
+        //     transform.position = _slot.transform.position;
+        //     // _slot.Placed();
+        //     _placed = true;
+        // }
+        // else
+        // {
+        //     transform.position = _originalPosition;
+        //     _source.PlayOneShot(_dropClick);
+        //     _dragging = false;
+        // }
+        
+    }
+
+    Vector2 GetMousePos()
+    {
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 }
