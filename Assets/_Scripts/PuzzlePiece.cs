@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip _pickUpClip, _dropClick;
+    private bool _dragging, _placed;
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseDown()
     {
+        _dragging = true;
+        _source.PlayOneShot(_pickUpClip);
         
+        // _offset = GetMousePos() - (Vector2)transform.position;
     }
 }
