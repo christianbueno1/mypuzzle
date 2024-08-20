@@ -25,7 +25,7 @@ public class PuzzlePiece : MonoBehaviour
 
     void Update()
     {
-        // if (_placed) return;
+        if (_placed) return;
         if (!_dragging) return;
 
         var mousePosition = GetMousePos();
@@ -42,22 +42,22 @@ public class PuzzlePiece : MonoBehaviour
 
     void OnMouseUp()
     {
-        transform.position = _originalPosition;
-        _dragging = false;
-        _source.PlayOneShot(_dropClick);
+        // transform.position = _originalPosition;
+        // _dragging = false;
+        // _source.PlayOneShot(_dropClick);
 
-        // if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
-        // {
-        //     transform.position = _slot.transform.position;
-        //     // _slot.Placed();
-        //     _placed = true;
-        // }
-        // else
-        // {
-        //     transform.position = _originalPosition;
-        //     _source.PlayOneShot(_dropClick);
-        //     _dragging = false;
-        // }
+        if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
+        {
+            transform.position = _slot.transform.position;
+            _slot.Placed();
+            _placed = true;
+        }
+        else
+        {
+            transform.position = _originalPosition;
+            _source.PlayOneShot(_dropClick);
+            _dragging = false;
+        }
         
     }
 

@@ -419,7 +419,7 @@ Transform:
   m_GameObject: {fileID: 954260769}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43, y: 2.16, z: 0}
+  m_LocalPosition: {x: -0.16, y: 2.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -483,7 +483,7 @@ Transform:
   m_GameObject: {fileID: 1373147715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.91, y: 0.83, z: 0}
+  m_LocalPosition: {x: 6.7, y: 0.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -521,7 +521,7 @@ MonoBehaviour:
   _slotPrefabs:
   - {fileID: 8101247931679218176, guid: 335ba4fb09cc940b480e66c9bd5bb6e0, type: 3}
   - {fileID: 8101247931679218176, guid: 38dd25c3c72963a818e9fc2cd8644a9b, type: 3}
-  _piecePrefab: {fileID: 0}
+  _piecePrefab: {fileID: 7147816754705278828, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
   _slotParent: {fileID: 954260770}
   _pieceParent: {fileID: 374971918}
 --- !u!4 &1657053263

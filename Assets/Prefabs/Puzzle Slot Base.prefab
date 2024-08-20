@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf396637f391e61f49a7e40b47a1e9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Renderer: {fileID: 0}
+  Renderer: {fileID: 6467719888595464954}
   _source: {fileID: 2417021773275528022}
   _completeClip: {fileID: 0}
 --- !u!82 &2417021773275528022
