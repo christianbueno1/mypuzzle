@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 22ddfa8746248bc0a9fc6fd6f6f4c4fa
+=======
+guid: b86f3869cf593f34fb3951675dc4cea4
+>>>>>>> dragndrop-tarodev
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
