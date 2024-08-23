@@ -519,8 +519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slotPrefabs:
-  - {fileID: 8101247931679218176, guid: 335ba4fb09cc940b480e66c9bd5bb6e0, type: 3}
-  - {fileID: 8101247931679218176, guid: 38dd25c3c72963a818e9fc2cd8644a9b, type: 3}
+  - {fileID: 3646455969339354493, guid: 8cc9e36beafcbf134924cc03bb8c8205, type: 3}
+  - {fileID: 4443540615907231071, guid: 9638a082dec5c5e819834b928d34e85e, type: 3}
   _piecePrefab: {fileID: 7147816754705278828, guid: 820c25ecaf7120220bb377eed57bc9bd, type: 3}
   _slotParent: {fileID: 954260770}
   _pieceParent: {fileID: 374971918}
