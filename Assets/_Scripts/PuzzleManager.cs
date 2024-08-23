@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private PuzzlePiece _piecePrefab;
 
     [SerializeField] private Transform _slotParent, _pieceParent;
+
+    private int _piecesPlaced;
 
     void Start()
     {
@@ -23,6 +26,22 @@ public class PuzzleManager : MonoBehaviour
             var spawnedSlot = Instantiate(_slotPrefabs[i], _slotParent.GetChild(i).position, Quaternion.identity);
             var spawnedPiece = Instantiate(_piecePrefab, _pieceParent.GetChild(i).position, Quaternion.identity);
             spawnedPiece.Init(spawnedSlot);
+            spawnedPiece.OnPiecePLaced += HandlePiecePlaced;
         }
+    }
+
+    private void HandlePiecePlaced()
+    {
+        _piecesPlaced++;
+        if (_piecesPlaced >= _slotPrefabs.Count)
+        {
+            LoadNextLevel();
+        }
+    }
+
+    private void LoadNextLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }

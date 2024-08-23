@@ -12,6 +12,9 @@ public class PuzzlePiece : MonoBehaviour
     private Vector2 _offset, _originalPosition;
     private PuzzleSlot _slot;
 
+    public delegate void PiecePlacedHandler();
+    public event PiecePlacedHandler OnPiecePLaced;
+
     public void Init(PuzzleSlot slot)
     {
         _renderer.sprite = slot.Renderer.sprite;
@@ -36,16 +39,11 @@ public class PuzzlePiece : MonoBehaviour
     {
         _dragging = true;
         _source.PlayOneShot(_pickUpClip);
-        
         _offset = GetMousePos() - (Vector2)transform.position;
     }
 
     void OnMouseUp()
     {
-        // transform.position = _originalPosition;
-        // _dragging = false;
-        // _source.PlayOneShot(_dropClick);
-
         if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
         {
             transform.position = _slot.transform.position;
