@@ -49,6 +49,7 @@ public class PuzzlePiece : MonoBehaviour
             transform.position = _slot.transform.position;
             _slot.Placed();
             _placed = true;
+            OnPiecePLaced?.Invoke();
         }
         else
         {
