@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6594514953185606212
+--- !u!1001 &4512662244180006699
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -51,15 +51,15 @@ PrefabInstance:
     - target: {fileID: 3164067340563947588, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
       propertyPath: _completeClip
       value: 
-      objectReference: {fileID: 8300000, guid: db52742ecf7dcb0f5a615e1c2ae3668c, type: 3}
+      objectReference: {fileID: 8300000, guid: 76210991f7af3d3d7b254611d0f478c4, type: 3}
     - target: {fileID: 6044412388583758267, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
       propertyPath: m_Name
-      value: Puzzle Slot Base Sun
+      value: Puzzle Slot Mariposa
       objectReference: {fileID: 0}
     - target: {fileID: 6467719888595464954, guid: c262450f4e80e6cf088caedcabca8436, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 25b4e7af4eaf5dcf1a1e53e2cd4f2730, type: 3}
+      objectReference: {fileID: 21300000, guid: f0a0e06b20224b09783da29d4ef99b20, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
