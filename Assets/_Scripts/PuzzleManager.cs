@@ -49,6 +49,13 @@ public class PuzzleManager : MonoBehaviour
     private void LoadNextLevel()
     {
         int currentSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneIndex + 1);
+        int nextSceneIndex = currentSceneIndex + 1;
+    
+        if (nextSceneIndex == 5)
+        {
+            nextSceneIndex = 0; // Load the scene with index 0 if the next level is index 5
+        }
+    
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneIndex);
     }
 }
