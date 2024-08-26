@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class PuzzleManager : MonoBehaviour
 
     [SerializeField] private Transform _slotParent, _pieceParent;
 
-    private int _piecesPlaced;
+    private int _piecesPlaced = 0;
 
     void Start()
     {
@@ -21,7 +21,6 @@ public class PuzzleManager : MonoBehaviour
     
     void Spawn()
     {
-        // var randomSet = _slotPrefabs.OrderBy(s=>Random.value).Take(3).ToList();
         for (int i = 0; i < _slotPrefabs.Count; i++)
         {
             var spawnedSlot = Instantiate(_slotPrefabs[i], _slotParent.GetChild(i).position, Quaternion.identity);
@@ -36,8 +35,15 @@ public class PuzzleManager : MonoBehaviour
         _piecesPlaced++;
         if (_piecesPlaced >= _slotPrefabs.Count)
         {
-            LoadNextLevel();
+            StartCoroutine(ShowMessageAndLoadNextLevel());
+            
         }
+    }
+
+    private IEnumerator ShowMessageAndLoadNextLevel()
+    {
+        yield return new WaitForSeconds(2);
+        LoadNextLevel();
     }
 
     private void LoadNextLevel()
